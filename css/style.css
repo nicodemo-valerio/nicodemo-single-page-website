@@ -1,0 +1,167 @@
+body {
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Generic elements */
+h2 {font-size: 2em; padding-left: 2em;}
+a {color: gray;}
+a:hover {text-decoration: none;}
+a:hover img{border: 1px solid brown;}
+
+/* Generic classes */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.small {font-size: 0.3em;}
+.centered {text-align: center;}
+
+/* Animations */
+img.slide-from-right, div.slide-from-right, p.slide-from-right {
+  position: relative;
+  animation: slide-from-right 3s;
+}
+@keyframes slide-from-right{
+  0%   {right: -400%;}
+  100% {right: 0px;}
+}
+
+img.slide-from-left, div.slide-from-left, p.slide-from-left {
+  position: relative;
+  animation: slide-from-left 3s;
+}
+@keyframes slide-from-left{
+  0%   {left: -100%;}
+  100% {left: 0px;}
+}
+
+img.slide-from-top, div.slide-from-top, p.slide-from-top {
+  position: relative;
+  animation: slide-from-top 3s;
+}
+@keyframes slide-from-top{
+  0%   {top: -100%;}
+  100% {top: 0px;}
+}
+
+img.slide-from-bottom, div.slide-from-bottom, p.slide-from-bottom {
+  position: relative;
+  animation: slide-from-bottom 3s;
+}
+@keyframes slide-from-bottom{
+  0%   {bottom: -100%;}
+  100% {bottom: 0px;}
+}
+
+img.slide-left-right, div.slide-left-right, p.slide-left-right {
+  position: relative;
+  animation: slide-left-right 3s;
+}
+@keyframes slide-left-right {
+  0%  {left: -50%;}
+  50% {left: +50%;}
+  100% {left: -0%;}
+}
+
+/* Header */
+header {background: black;}
+#language {text-align: right; padding-top: 1em;}
+#header-title {float: left;}
+#header-title h1 {
+  color: lightgray;
+  font-size: 3em;
+  position: relative;
+  animation: slide-from-right 3s;
+}
+header nav {
+  float: right;
+  padding-top: 3em;
+  position: relative;
+  animation: slide-from-left 3s;
+}
+header li {
+    float: left;
+    text-decoration: none;
+    display: inline;
+    margin-right: 1em;
+}
+header a {
+  color: lightgray;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header a:hover {
+  color: black;
+  background-color: white;
+  padding: 0.5em;
+}
+
+/* Showcase */
+#showcase {
+  min-height: 500px;
+  min-width: 800px;
+  background-image: url('../img/showcase/keyboard.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  opacity: 0.7;
+  text-align: center;
+  color: white;
+}
+#showcase h2 {
+  font-size: 1.5em;
+  color: brown;
+  padding-top: 2.5em;
+}
+
+/* About */
+#about {}
+
+/* Services */
+#services {}
+.service, .workblock {
+  float: left;
+  width: 30%;
+  font-size: 0.6em;
+  padding: 1em;
+}
+.service h3 {text-align: center;}
+/* Work */
+#work {}
+#workblock {}
+
+/* Contacts */
+#contacts {}
+
+/* Footer */
+footer{
+  background: black;
+  color: lightgray;
+  text-align: center;
+  padding: 3em 0;
+}
+/* Media */
+@media(max-width: 768px) {
+  body {font-size: 1em;}
+  h2 {padding-left: 0;}
+  #header-title, header nav, header nav li, .container,
+  #showcase, #about, #services, .service, #work, .workblock, #contacts,
+  footer {
+    float:none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+  header nav {padding-top: 0;}
+}
+
+@media(max-width: 800px) {
+  #showcase {min-width: 200px; min-height: 50px;}
+  #showcase h2 {margin-top: 0.3em;}
+}
