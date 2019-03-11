@@ -15,6 +15,7 @@ a:hover img{border: 1px solid brown;}
 
 /* Generic classes */
 .container {
+  color: #333;
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -70,11 +71,10 @@ img.slide-left-right, div.slide-left-right, p.slide-left-right {
 }
 
 /* Header */
-header {background: black;}
-#language {text-align: right; padding-top: 1em;}
+#language {text-align: center; padding-top: 1em;}
 #header-title {float: left;}
 #header-title h1 {
-  color: lightgray;
+  color: #333;
   font-size: 3em;
   position: relative;
   animation: slide-from-right 3s;
@@ -92,42 +92,43 @@ header li {
     margin-right: 1em;
 }
 header a {
-  color: lightgray;
+  color: #333;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0.5em;
 }
 header a:hover {
-  color: black;
-  background-color: white;
-  padding: 0.5em;
+  color: white;
+  background-color: black;
 }
 
 /* Showcase */
 #showcase {
-  min-height: 500px;
+  min-height: 350px;
   min-width: 800px;
   background-image: url('../img/showcase/keyboard.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
-  opacity: 0.7;
   text-align: center;
   color: white;
 }
+#showcase h2, p {
+  margin: 0;
+  padding-left: 0;
+}
 #showcase h2 {
-  font-size: 1.5em;
-  color: brown;
-  padding-top: 2.5em;
+  margin-top: 2em;
 }
 
 /* About */
 #about {}
 
 /* Services */
-#services {}
+#services {background-color: lightgray; padding-bottom: 1em;}
 .service, .workblock {
   float: left;
-  width: 30%;
+  width: 29%;
   font-size: 0.6em;
   padding: 1em;
 }
@@ -137,7 +138,7 @@ header a:hover {
 #workblock {}
 
 /* Contacts */
-#contacts {}
+#contacts {background-color: lightgray; padding-bottom: 1em;}
 
 /* Footer */
 footer{
