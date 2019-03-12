@@ -71,7 +71,10 @@ img.slide-left-right, div.slide-left-right, p.slide-left-right {
 }
 
 /* Header */
-#language {text-align: center; padding-top: 1em;}
+header {
+  background-color: white;
+}
+#language {text-align: right; font-size: 0.5em; padding-top: 1em;}
 #header-title {float: left;}
 #header-title h1 {
   color: #333;
@@ -82,6 +85,7 @@ img.slide-left-right, div.slide-left-right, p.slide-left-right {
 header nav {
   float: right;
   padding-top: 3em;
+  padding-bottom: 2em;
   position: relative;
   animation: slide-from-left 3s;
 }
@@ -104,7 +108,7 @@ header a:hover {
 
 /* Showcase */
 #showcase {
-  min-height: 350px;
+  min-height: 600px;
   min-width: 800px;
   background-image: url('../img/showcase/keyboard.jpg');
   background-repeat: no-repeat;
@@ -117,15 +121,10 @@ header a:hover {
   margin: 0;
   padding-left: 0;
 }
-#showcase h2 {
-  margin-top: 2em;
-}
-
-/* About */
-#about {}
+#showcase h2 {margin-top: 250px;}
 
 /* Services */
-#services {background-color: lightgray; padding-bottom: 1em;}
+#services {padding-bottom: 1em;}
 .service, .workblock {
   float: left;
   width: 29%;
@@ -133,22 +132,20 @@ header a:hover {
   padding: 1em;
 }
 .service h3 {text-align: center;}
-/* Work */
-#work {}
-#workblock {}
 
 /* Contacts */
-#contacts {background-color: lightgray; padding-bottom: 1em;}
+#contacts {padding-bottom: 1em;}
 
 /* Footer */
 footer{
-  background: black;
+  font-size: 0.5em;
+  background: white;
   color: lightgray;
   text-align: center;
   padding: 3em 0;
 }
 /* Media */
-@media(max-width: 768px) {
+@media(max-width: 400px) {
   body {font-size: 1em;}
   h2 {padding-left: 0;}
   #header-title, header nav, header nav li, .container,
@@ -160,9 +157,7 @@ footer{
     padding: 0;
   }
   header nav {padding-top: 0;}
-}
 
-@media(max-width: 800px) {
-  #showcase {min-width: 200px; min-height: 50px;}
-  #showcase h2 {margin-top: 0.3em;}
+  #showcase {min-width: 200px; min-height: 200px;}
+  #showcase h2 {margin-top: 2em;}
 }
