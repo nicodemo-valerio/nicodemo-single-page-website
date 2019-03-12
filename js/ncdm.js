@@ -16,6 +16,7 @@ function hideSections(isOnLoad) {
     if(isOnLoad) {
       link.onclick = displaySection;
       document.getElementById(getName(link) + "Section").onmouseover = displaySection;
+      document.getElementById(getName(link) + "Section").ontouchstart = displaySection;
       document.getElementById(getName(link) + "Section").onmouseleave = hideSection;
     }
     hideSection(getName(link));
