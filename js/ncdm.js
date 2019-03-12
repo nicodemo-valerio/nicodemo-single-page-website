@@ -2,7 +2,7 @@
  File: ncdm.js
  Author: Nicodemo valerio
 */
-
+window.onscroll = function() {scrollToTop()};
 document.body.onload = hideSections(true);
 
 function hideSections(isOnLoad) {
@@ -33,4 +33,17 @@ function displaySection() {
   hideSections(false);
   var sectionName = getName(this);
   document.getElementById(sectionName + "Section").style.display = "block";
+}
+
+function scrollToTop() {
+  if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("goToTopButton").style.display = "block";
+  } else {
+    document.getElementById("goToTopButton").style.display = "none";
+  }
+}
+
+function goToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

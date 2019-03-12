@@ -13,6 +13,20 @@ a {color: gray;}
 a:hover {text-decoration: none;}
 a:hover img{border: 1px solid brown;}
 
+#goToTopButton {
+  display: block;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 99;
+  cursor: pointer;
+  padding: 1em;
+}
+#goToTopButton:hover {
+  color: white;
+  background-color: black;
+}
+
 /* Generic classes */
 .container {
   color: #333;
