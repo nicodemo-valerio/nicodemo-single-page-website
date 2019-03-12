@@ -15,6 +15,8 @@ function hideSections(isOnLoad) {
     link = menuLinks[i].children[0];
     if(isOnLoad) {
       link.onclick = displaySection;
+      document.getElementById(getName(link) + "Section").onmouseover = displaySection;
+      document.getElementById(getName(link) + "Section").onmouseleave = hideSection;
     }
     hideSection(getName(link));
   }
@@ -25,14 +27,21 @@ function getName(link) {
   return sectionName.substr(1, sectionName.length);
 }
 
-function hideSection(sectionName) {
-  document.getElementById(sectionName + "Section").style.display = "none";
+function hideSection(link) {
+  if(this.attributes != null && this.attributes.class.value == "container"){
+    document.getElementById(this.attributes.id.value).style.opacity = 0.1;
+  } else if(link != undefined){
+    document.getElementById(link + "Section").style.opacity = 0.1;
+  }
 }
 
 function displaySection() {
-  hideSections(false);
-  var sectionName = getName(this);
-  document.getElementById(sectionName + "Section").style.display = "block";
+  //hideSections(false);
+  if(this.attributes.class.value == "container"){
+    document.getElementById(this.attributes.id.value).style.opacity = 1;
+  }
+    //var sectionName = getName(this);
+    //document.getElementById(sectionName + "Section").style.opacity = 1;
 }
 
 function scrollToTop() {

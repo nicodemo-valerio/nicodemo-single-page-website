@@ -33,6 +33,8 @@ a:hover img{border: 1px solid brown;}
   width: 80%;
   margin: auto;
   overflow: hidden;
+  transition-delay: 0.5s;
+  transition-duration: 3s;
 }
 .small {font-size: 0.3em;}
 .centered {text-align: center;}
@@ -90,11 +92,10 @@ header {
 }
 #language {text-align: right; font-size: 0.5em; padding-top: 1em;}
 #header-title {float: left;}
-#header-title h1 {
-  color: #333;
-  font-size: 3em;
-  position: relative;
-  animation: slide-from-right 3s;
+
+#header-title a:hover {
+  color: black;
+  background-color: white;
 }
 header nav {
   float: right;
@@ -118,6 +119,13 @@ header a {
 header a:hover {
   color: white;
   background-color: black;
+}
+#header-title h1 {
+  color: #333;
+  font-size: 3em;
+  position: relative;
+  animation: slide-from-right 3s;
+  text-transform: lowercase;
 }
 
 /* Showcase */
