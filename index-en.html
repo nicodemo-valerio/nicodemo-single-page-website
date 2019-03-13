@@ -8,13 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicodemo Valerio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/icons/favicon.png">
+    <script src="./js/ncdm.js" defer="true"></script>
   </head>
   <body>
     <header>
       <div class="container">
-        <div id="language">
-          <a href="index.html">ITA</a>
-        </div>
         <div id="header-title">
             <h1>ncdm</h1>
         </div>
@@ -24,89 +23,108 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#contacts">Contacts</a></li>
+            <li><a href="index.html" id="language">ITA</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <section id="showcase">
+    <section id="goToTop">
       <div class="container">
-        <h2>Mission: web development</h2>
+        <button type="button" id="goToTopButton" name="goToTopButton" onclick="goToTop()" title="Go to top">Go to top</button>
+      </div>
+    </section>
+    <section id="showcase">
+      <div class="container" id="showcaseSection">
+        <h2>Nicodemo Valerio</h2>
+        <p>Sviluppatore web</p>
       </div>
     </section>
     <section id="about">
-      <div class="container">
-        <h2>About</h2>
-        <p>Hey, I'm Nicodemo. I build websites. From scratch or by improving an existing one.
-          <br>I've been working in <abbr title="Information technology">IT</abbr> since 2007 but I also switch to different industries because <strong>I love learning</strong> and <strong>challenge myself</strong>. That's why I always "catch the opportunity". I worked (still, for seasonal jobs) as chef, sport crew member and cycling tourist guide.
-          <br>Working in the to improve your skills and learn new things every day. That's what developing and maintaining websites is so exciting to me!
+      <div class="container" id="aboutSection">
+        <h2>Chi sono</h2>
+        <p>Ciao, sono Nicodemo. Sviluppo, costruisco, creo siti web.
+          <br>Lavoro nel mondo dell'informatica dal 2007. Mi piace lavorare in questo settore perché in continua evoluzione. Mi costringe ad un aggiornamento continuo per mantenermi al passo con le competenze richieste dal mercato.
+          <br>Utilizzando gli "strumenti" tecnologici più moderni mi piace creare siti che siano di facile utilizzo, semplici ma allo stesso tempo di impatto immediato.
         </p>
-        <p class="linktotop"><a href="#menu">Top</a></p>
+        <h3>Curriculum <abbr title="Information Technology">IT</abbr> in breve</h3>
+        <ul>
+          <li>Settembre 2018 - presente: sviluppatore web freelance</li>
+          <li>Luglio 2010 - Luglio 2014: programmatore (.net, C#, PHP, SQL) e consulente informatico (ESRI ArcGIS) presso <a href="http://rokitscience.com/">Rokit Science</a>, Perth (Australia)</li>
+          <li>Settembre 2007 - Gennaio 2010: programmatore (Java, PHP, SQL) presso <a href="https://www.iks.it">IKS</a>, Padova</li>
+          <li>Luglio 2007: laurea magistrale in informatica, Università degli studi di Padova</li>
+        </ul>
+        <p>Qui potete visualizzare il mio <abbr title="Curriculum Vitae">CV</abbr> completo: <a href="#">Curriculum_Nicodemo_Valerio.pdf</a></p>
+        <h3>Oltre l'informatica</h3>
+        <p>Mi piace imparare e "fare" un sacco di cose: cucinare (e mangiare :D), correre, andare in bicicletta, viaggiare, fare foto e <a href="https://www.youtube.com/c/NicodemoValerio" target="_blank">video</a>. Grazie a queste passioni mi sono "buttato" a fare esperienze e lavori per i quali cui non possedevo delle "qualifiche ufficiali". Ho girato il mondo a supporto di <a href="http://www.paoloaste.it" target="_blank">amici</a> <a href="https://keepbrave.com/gallery/" target="_blank">ultracycler</a>, lavorato come <a href="http://www.thefitduck.wordpress.com" target="_blank">chef</a>, <a href="https://www.girolibero.it" target="_blank">guida cicloturistica</a> e operatore logistico in ambito di viaggi in bicicletta.</p>
       </div>
     </section>
     <section id="services">
-      <div class="container">
-          <h2>Services</h2>
+      <div class="container" id="servicesSection">
+          <h2>Servizi</h2>
           <div class="service">
-            <h3>Web development</h3>
-            <p>A website is the way a business, person, brand present nowadays to the world. Often the website is accessed from a mobile device. That's why is important that the pages are responsive and showcase the best content. My approach is to meet the client, understand his/her needs and propose the layout with the best price/quality option.
-            </p>
-            <p>Prices: it depends. A small presentation site with 4-5 pages (ideal for small business, personal portfolio, like this website) about $100 per page. A larger website that require a database, blog, content media from $800 up to $3000. <a href="#contacts">Write me</a> for a quote then we can talk about it.</p>
+            <h3>Sviluppo siti web</h3>
+            <p class="centered"><img src="./img/services/service_web_development.png" alt="Web development icon" height="128" width="128"> </p>
+            <p class="centered">Realizzazione o aggiornamento di siti web <strong>responsive</strong>, che si adattino sia ai monitor di computer desktop sia agli schermi dei dispositivi mobili.
+            <br>Durante un primo incontro si valuta la soluzione migliore che soddisfi le <strong>esigenze del cliente</strong> e che abbia un ottimo rapporto qualità/prezzo.</p>
+            <p class="centered">Prezzi: dai 300 ai 3000 euro in base alla complessità del sito.</p>
           </div>
           <div class="service">
-            <h3>Web maintenance</h3>
-            <p>Websites are "live animals" that evolve overtime. With fast technology changes they often need maintenace in order to upgrade the appearance and the content. To reach this goal I can redisign an existing website to give a more modern and good looking appearance. Also update the content and setup your social media accounts.
-              <br>Prices: $50/hour • $300/month
+            <h3>Manutenzione siti web</h3>
+            <p class="centered"><img src="./img/services/service_maintenance.png" alt="Web development icon" height="128" width="128"></p>
+            <p class="centered">Aggiornamento della <strong>grafica</strong>, <strong>contenuti testuali e multimediali</strong> (foto e video), <strong>gestione dei social media</strong> e ottimizzazione dei costi di servizio (hosting, dominio) in base all'utilizzo.
+            </p>
+            <p class="centered">Prezzi: 50 euro/ora <em>una tantum</em> • 300 euro/mese
             </p>
           </div>
           <div class="service">
             <h3>Video promo</h3>
-            <p>In the last years I've been passioned about filmaking. I love to create promo videos that tell the story of people, their work and the quality they can offer to a potential customer.
-              <br>Prices: $200/photo service (min 15 images) • $500 1'-3' video promo
+            <p class="centered"><img src="./img/services/service_video.png" alt="Web development icon" height="128" width="128"></p>
+            <p class="centered">Creazione di gallerie fotografiche e video presentazione relativi all'azienda/persona.</p>
+            <p class="centered">Prezzi: Pacchetto foto (25 foto) 200 euro • Video promozionale da 1-5 minuti 500 euro
+            </p>
+            <p class="centered">
+            <iframe width="280" height="158" src="https://www.youtube.com/embed/1aF78rdouV4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </p>
           </div>
       </div>
-      <p class="linktotop"><a href="#menu">Top</a></p>
     </section>
     <section id="work">
-      <div class="container">
-        <h2>Work</h2>
+      <div class="container" id="workSection">
+        <h2>Lavori</h2>
         <div class="workblock">
-          <h3>Nadia Nava</h3>
-          <p><a href="https://www.nadianava.it" target="_blank"><img src="./img/work/nadianava.png" alt="Nadia Nava website homepage screenshot"></a>
-            <br>
-            Nadia is an artist and textile designer. I had the opportunity to work with her side-by-side during the restyling of her website. Artists are very demanding. :) But she was very happy about the final result.
-            <br><a href="https://www.nadianava.it" target="_blank">nadianava.it</a>
-            <br>Details: wordpress, child-theme development, video promo, custom photographs
+          <h3 class="centered">Nadia Nava</h3>
+          <p class="centered"><a href="https://www.nadianava.it" target="_blank"><img src="./img/work/nadianava.png" alt="Homepage del sito www.nadianava.it" height="150" width="150"></a>
           </p>
+          <p class="centered"><a href="https://www.nadianava.it" target="_blank">nadianava.it</a></p>
+          <p class="centered">Restyling del sito di Nadia Nava, artista e textile designer a Milano.</p>
+          <p class="centered">wordpress, child-theme development, video promo, servizio foto</p>
         </div>
         <div class="workblock">
-          <h3>Ellesei Fisioterapia</h3>
-          <p><img src="./img/work/nadianava.png" alt="Nadia Nava website homepage screenshot">
-            <br>
-            Donato is physioterapist based in Milan. I had the opportunity to redisign his website to give it a responsive and modern look. I setup a reservation system that his customers can use to book appointments to his studio.
-            <br><a href="https://www.ellesei-fisioterapia.it">ellesei-fisioterapia.it</a>
-            <br>Details: wix.com, video promo, photographs
+          <h3 class="centered">Ellesei Fisioterapia</h3>
+          <p class="centered"><a href="https://www.ellesei-fisioterapia.it" target="_blank"><img src="./img/work/ellesei.png" alt="Homepage del sito www.ellesei-fisioterapia.it" height="150" width="150"></a>
           </p>
+          <p class="centered"><a href="https://www.ellesei-fisioterapia.it" target="_blank">ellesei-fisioterapia.it</a></p>
+          <p class="centered">Restyling del sito di Donato Lecci, fisioterapista a Milano.</p>
+          <p class="centered">wix, servizio foto, video promo</p>
         </div>
         <div class="workblock">
-          <h3>Studi storici Giovanni Anapoli</h3>
-          <p><a href="https://www.studistoricianapoli.it"><img src="./img/work/nadianava.png" alt="Nadia Nava website homepage screenshot"></a>
-            <br>
-            I setup a blog platform for an historical archive.
-            <br>Details: wordpress
+          <h3 class="centered">Studi Storici Giovanni Anapoli</h3>
+          <p class="centered"><a href="http://www.studistoricianapoli.it" target="_blank"><img src="./img/work/studistoricianapoli.png" alt="Homepage del sito www.studistoricianapoli.it" height="150" width="150"></a>
           </p>
+          <p class="centered"><a href="https://www.studistoricianapoli.it" target="_blank">studistoricianapoli.it</a></p>
+          <p class="centered">Sito dell'archivio storico Giovanni Anapoli di Montecchio Precalcino (VI).</p>
+          <p class="centered">wordpress</p>
         </div>
       </div>
-      <p class="linktotop"><a href="#menu">Top</a></p>
     </section>
     <section id="contacts">
-      <div class="container">
-        <h2>Contacts</h2>
-        <p>Please contact me if you want a quote or any question:
+      <div class="container" id="contactsSection">
+        <h2>Contatti</h2>
+        <p class="centered">Contattami pure per qualsiasi informazione, domanda, preventivo!
           <br><a href="mailto:ncdm.developer@gmail.com">ncdm.developer@gmail.com</a>
           <br>+39 342 101 44 56
         </p>
-        <p class="linktotop"><a href="#menu">Top</a></p>
+        <p class="centered"><a href="https://www.facebook.com/nicodemo.valerio" target="_blank"><img src="./img/social/facebook.png" alt="Facebook icon" height="64" width="64"></a> <a href="https://www.instagram.com/nicodemovalerio/" target="_blank"><img src="./img/social/instagram.png" alt="Instagram icon" height="64" width="64"></a> <a href="https://www.linkedin.com/in/nicodemovalerio/" target="_blank"><img src="./img/social/linkedin.png" alt="Linkedin icon" height="64" width="64"></a> <a href="https://www.youtube.com/channel/UCPxB_SiQevOZTGFGnhRDDGw" target="_blank"><img src="./img/social/youtube.png" alt="Youtube icon" height="64" width="64"></a></p>
       </div>
     </section>
     <footer>
@@ -115,4 +133,264 @@
       </div>
     </footer>
   </body>
+</html>
+<title>Nicodemo Valerio</title>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="icon" href="./img/icons/favicon.png">
+<script src="./js/ncdm.js" defer="true"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div id="language">
+      <a href="index-en.html">ENG</a>
+    </div>
+    <div id="header-title">
+        <h1>ncdm</h1>
+    </div>
+    <nav id="menu">
+      <ul>
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#services">Servizi</a></li>
+        <li><a href="#work">Lavori</a></li>
+        <li><a href="#contacts">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section id="goToTop">
+  <div class="container">
+    <button type="button" id="goToTopButton" name="goToTopButton" onclick="goToTop()" title="Go to top">Go to top</button>
+  </div>
+</section>
+<section id="showcase">
+  <div class="container" id="showcaseSection">
+    <h2>Nicodemo Valerio</h2>
+    <p>Sviluppatore web</p>
+  </div>
+</section>
+<section id="about">
+  <div class="container" id="aboutSection">
+    <h2>Chi sono</h2>
+    <p>Ciao, sono Nicodemo. Sviluppo, costruisco, creo siti web.
+      <br>Lavoro nel mondo dell'informatica dal 2007. Mi piace lavorare in questo settore perché in continua evoluzione. Mi costringe ad un aggiornamento continuo per mantenermi al passo con le competenze richieste dal mercato.
+      <br>Utilizzando gli "strumenti" tecnologici più moderni mi piace creare siti che siano di facile utilizzo, semplici ma allo stesso tempo di impatto immediato.
+    </p>
+    <h3>Curriculum <abbr title="Information Technology">IT</abbr> in breve</h3>
+    <ul>
+      <li>Settembre 2018 - presente: sviluppatore web freelance</li>
+      <li>Luglio 2010 - Luglio 2014: programmatore (.net, C#, PHP, SQL) e consulente informatico (ESRI ArcGIS) presso <a href="http://rokitscience.com/">Rokit Science</a>, Perth (Australia)</li>
+      <li>Settembre 2007 - Gennaio 2010: programmatore (Java, PHP, SQL) presso <a href="https://www.iks.it">IKS</a>, Padova</li>
+      <li>Luglio 2007: laurea magistrale in informatica, Università degli studi di Padova</li>
+    </ul>
+    <p>Qui potete visualizzare il mio <abbr title="Curriculum Vitae">CV</abbr> completo: <a href="#">Curriculum_Nicodemo_Valerio.pdf</a></p>
+    <h3>Oltre l'informatica</h3>
+    <p>Mi piace imparare e "fare" un sacco di cose: cucinare (e mangiare :D), correre, andare in bicicletta, viaggiare, fare foto e <a href="https://www.youtube.com/c/NicodemoValerio" target="_blank">video</a>. Grazie a queste passioni mi sono "buttato" a fare esperienze e lavori per i quali cui non possedevo delle "qualifiche ufficiali". Ho girato il mondo a supporto di <a href="http://www.paoloaste.it" target="_blank">amici</a> <a href="https://keepbrave.com/gallery/" target="_blank">ultracycler</a>, lavorato come <a href="http://www.thefitduck.wordpress.com" target="_blank">chef</a>, <a href="https://www.girolibero.it" target="_blank">guida cicloturistica</a> e operatore logistico in ambito di viaggi in bicicletta.</p>
+  </div>
+</section>
+<section id="services">
+  <div class="container" id="servicesSection">
+      <h2>Servizi</h2>
+      <div class="service">
+        <h3>Sviluppo siti web</h3>
+        <p class="centered"><img src="./img/services/service_web_development.png" alt="Web development icon" height="128" width="128"> </p>
+        <p class="centered">Realizzazione o aggiornamento di siti web <strong>responsive</strong>, che si adattino sia ai monitor di computer desktop sia agli schermi dei dispositivi mobili.
+        <br>Durante un primo incontro si valuta la soluzione migliore che soddisfi le <strong>esigenze del cliente</strong> e che abbia un ottimo rapporto qualità/prezzo.</p>
+        <p class="centered">Prezzi: dai 300 ai 3000 euro in base alla complessità del sito.</p>
+      </div>
+      <div class="service">
+        <h3>Manutenzione siti web</h3>
+        <p class="centered"><img src="./img/services/service_maintenance.png" alt="Web development icon" height="128" width="128"></p>
+        <p class="centered">Aggiornamento della <strong>grafica</strong>, <strong>contenuti testuali e multimediali</strong> (foto e video), <strong>gestione dei social media</strong> e ottimizzazione dei costi di servizio (hosting, dominio) in base all'utilizzo.
+        </p>
+        <p class="centered">Prezzi: 50 euro/ora <em>una tantum</em> • 300 euro/mese
+        </p>
+      </div>
+      <div class="service">
+        <h3>Video promo</h3>
+        <p class="centered"><img src="./img/services/service_video.png" alt="Web development icon" height="128" width="128"></p>
+        <p class="centered">Creazione di gallerie fotografiche e video presentazione relativi all'azienda/persona.</p>
+        <p class="centered">Prezzi: Pacchetto foto (25 foto) 200 euro • Video promozionale da 1-5 minuti 500 euro
+        </p>
+        <p class="centered">
+        <iframe width="280" height="158" src="https://www.youtube.com/embed/1aF78rdouV4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+      </div>
+  </div>
+</section>
+<section id="work">
+  <div class="container" id="workSection">
+    <h2>Lavori</h2>
+    <div class="workblock">
+      <h3 class="centered">Nadia Nava</h3>
+      <p class="centered"><a href="https://www.nadianava.it" target="_blank"><img src="./img/work/nadianava.png" alt="Homepage del sito www.nadianava.it" height="150" width="150"></a>
+      </p>
+      <p class="centered"><a href="https://www.nadianava.it" target="_blank">nadianava.it</a></p>
+      <p class="centered">Restyling del sito di Nadia Nava, artista e textile designer a Milano.</p>
+      <p class="centered">wordpress, child-theme development, video promo, servizio foto</p>
+    </div>
+    <div class="workblock">
+      <h3 class="centered">Ellesei Fisioterapia</h3>
+      <p class="centered"><a href="https://www.ellesei-fisioterapia.it" target="_blank"><img src="./img/work/ellesei.png" alt="Homepage del sito www.ellesei-fisioterapia.it" height="150" width="150"></a>
+      </p>
+      <p class="centered"><a href="https://www.ellesei-fisioterapia.it" target="_blank">ellesei-fisioterapia.it</a></p>
+      <p class="centered">Restyling del sito di Donato Lecci, fisioterapista a Milano.</p>
+      <p class="centered">wix, servizio foto, video promo</p>
+    </div>
+    <div class="workblock">
+      <h3 class="centered">Studi Storici Giovanni Anapoli</h3>
+      <p class="centered"><a href="http://www.studistoricianapoli.it" target="_blank"><img src="./img/work/studistoricianapoli.png" alt="Homepage del sito www.studistoricianapoli.it" height="150" width="150"></a>
+      </p>
+      <p class="centered"><a href="https://www.studistoricianapoli.it" target="_blank">studistoricianapoli.it</a></p>
+      <p class="centered">Sito dell'archivio storico Giovanni Anapoli di Montecchio Precalcino (VI).</p>
+      <p class="centered">wordpress</p>
+    </div>
+  </div>
+</section>
+<section id="contacts">
+  <div class="container" id="contactsSection">
+    <h2>Contatti</h2>
+    <p class="centered">Contattami pure per qualsiasi informazione, domanda, preventivo!
+      <br><a href="mailto:ncdm.developer@gmail.com">ncdm.developer@gmail.com</a>
+      <br>+39 342 101 44 56
+    </p>
+    <p class="centered"><a href="https://www.facebook.com/nicodemo.valerio" target="_blank"><img src="./img/social/facebook.png" alt="Facebook icon" height="64" width="64"></a> <a href="https://www.instagram.com/nicodemovalerio/" target="_blank"><img src="./img/social/instagram.png" alt="Instagram icon" height="64" width="64"></a> <a href="https://www.linkedin.com/in/nicodemovalerio/" target="_blank"><img src="./img/social/linkedin.png" alt="Linkedin icon" height="64" width="64"></a> <a href="https://www.youtube.com/channel/UCPxB_SiQevOZTGFGnhRDDGw" target="_blank"><img src="./img/social/youtube.png" alt="Youtube icon" height="64" width="64"></a></p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>&copy;2019 Nicodemo Valerio</p>
+  </div>
+</footer>
+</body>
+</html>
+<title>Nicodemo Valerio</title>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="icon" href="./img/icons/favicon.png">
+<script src="./js/ncdm.js" defer="true"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div id="language">
+      <a href="index-en.html">ENG</a>
+    </div>
+    <div id="header-title">
+        <h1>ncdm</h1>
+    </div>
+    <nav id="menu">
+      <ul>
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#services">Servizi</a></li>
+        <li><a href="#work">Lavori</a></li>
+        <li><a href="#contacts">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section id="goToTop">
+  <div class="container">
+    <button type="button" id="goToTopButton" name="goToTopButton" onclick="goToTop()" title="Go to top">Go to top</button>
+  </div>
+</section>
+<section id="showcase">
+  <div class="container" id="showcaseSection">
+    <h2>Nicodemo Valerio</h2>
+    <p>Sviluppatore web</p>
+  </div>
+</section>
+<section id="about">
+  <div class="container" id="aboutSection">
+    <h2>Chi sono</h2>
+    <p>Ciao, sono Nicodemo. Sviluppo, costruisco, creo siti web.
+      <br>Lavoro nel mondo dell'informatica dal 2007. Mi piace lavorare in questo settore perché in continua evoluzione. Mi costringe ad un aggiornamento continuo per mantenermi al passo con le competenze richieste dal mercato.
+      <br>Utilizzando gli "strumenti" tecnologici più moderni mi piace creare siti che siano di facile utilizzo, semplici ma allo stesso tempo di impatto immediato.
+    </p>
+    <h3>Curriculum <abbr title="Information Technology">IT</abbr> in breve</h3>
+    <ul>
+      <li>Settembre 2018 - presente: sviluppatore web freelance</li>
+      <li>Luglio 2010 - Luglio 2014: programmatore (.net, C#, PHP, SQL) e consulente informatico (ESRI ArcGIS) presso <a href="http://rokitscience.com/">Rokit Science</a>, Perth (Australia)</li>
+      <li>Settembre 2007 - Gennaio 2010: programmatore (Java, PHP, SQL) presso <a href="https://www.iks.it">IKS</a>, Padova</li>
+      <li>Luglio 2007: laurea magistrale in informatica, Università degli studi di Padova</li>
+    </ul>
+    <p>Qui potete visualizzare il mio <abbr title="Curriculum Vitae">CV</abbr> completo: <a href="#">Curriculum_Nicodemo_Valerio.pdf</a></p>
+    <h3>Oltre l'informatica</h3>
+    <p>Mi piace imparare e "fare" un sacco di cose: cucinare (e mangiare :D), correre, andare in bicicletta, viaggiare, fare foto e <a href="https://www.youtube.com/c/NicodemoValerio" target="_blank">video</a>. Grazie a queste passioni mi sono "buttato" a fare esperienze e lavori per i quali cui non possedevo delle "qualifiche ufficiali". Ho girato il mondo a supporto di <a href="http://www.paoloaste.it" target="_blank">amici</a> <a href="https://keepbrave.com/gallery/" target="_blank">ultracycler</a>, lavorato come <a href="http://www.thefitduck.wordpress.com" target="_blank">chef</a>, <a href="https://www.girolibero.it" target="_blank">guida cicloturistica</a> e operatore logistico in ambito di viaggi in bicicletta.</p>
+  </div>
+</section>
+<section id="services">
+  <div class="container" id="servicesSection">
+      <h2>Servizi</h2>
+      <div class="service">
+        <h3>Sviluppo siti web</h3>
+        <p class="centered"><img src="./img/services/service_web_development.png" alt="Web development icon" height="128" width="128"> </p>
+        <p class="centered">Realizzazione o aggiornamento di siti web <strong>responsive</strong>, che si adattino sia ai monitor di computer desktop sia agli schermi dei dispositivi mobili.
+        <br>Durante un primo incontro si valuta la soluzione migliore che soddisfi le <strong>esigenze del cliente</strong> e che abbia un ottimo rapporto qualità/prezzo.</p>
+        <p class="centered">Prezzi: dai 300 ai 3000 euro in base alla complessità del sito.</p>
+      </div>
+      <div class="service">
+        <h3>Manutenzione siti web</h3>
+        <p class="centered"><img src="./img/services/service_maintenance.png" alt="Web development icon" height="128" width="128"></p>
+        <p class="centered">Aggiornamento della <strong>grafica</strong>, <strong>contenuti testuali e multimediali</strong> (foto e video), <strong>gestione dei social media</strong> e ottimizzazione dei costi di servizio (hosting, dominio) in base all'utilizzo.
+        </p>
+        <p class="centered">Prezzi: 50 euro/ora <em>una tantum</em> • 300 euro/mese
+        </p>
+      </div>
+      <div class="service">
+        <h3>Video promo</h3>
+        <p class="centered"><img src="./img/services/service_video.png" alt="Web development icon" height="128" width="128"></p>
+        <p class="centered">Creazione di gallerie fotografiche e video presentazione relativi all'azienda/persona.</p>
+        <p class="centered">Prezzi: Pacchetto foto (25 foto) 200 euro • Video promozionale da 1-5 minuti 500 euro
+        </p>
+        <p class="centered">
+        <iframe width="280" height="158" src="https://www.youtube.com/embed/1aF78rdouV4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+      </div>
+  </div>
+</section>
+<section id="work">
+  <div class="container" id="workSection">
+    <h2>Lavori</h2>
+    <div class="workblock">
+      <h3 class="centered">Nadia Nava</h3>
+      <p class="centered"><a href="https://www.nadianava.it" target="_blank"><img src="./img/work/nadianava.png" alt="Homepage del sito www.nadianava.it" height="150" width="150"></a>
+      </p>
+      <p class="centered"><a href="https://www.nadianava.it" target="_blank">nadianava.it</a></p>
+      <p class="centered">Restyling del sito di Nadia Nava, artista e textile designer a Milano.</p>
+      <p class="centered">wordpress, child-theme development, video promo, servizio foto</p>
+    </div>
+    <div class="workblock">
+      <h3 class="centered">Ellesei Fisioterapia</h3>
+      <p class="centered"><a href="https://www.ellesei-fisioterapia.it" target="_blank"><img src="./img/work/ellesei.png" alt="Homepage del sito www.ellesei-fisioterapia.it" height="150" width="150"></a>
+      </p>
+      <p class="centered"><a href="https://www.ellesei-fisioterapia.it" target="_blank">ellesei-fisioterapia.it</a></p>
+      <p class="centered">Restyling del sito di Donato Lecci, fisioterapista a Milano.</p>
+      <p class="centered">wix, servizio foto, video promo</p>
+    </div>
+    <div class="workblock">
+      <h3 class="centered">Studi Storici Giovanni Anapoli</h3>
+      <p class="centered"><a href="http://www.studistoricianapoli.it" target="_blank"><img src="./img/work/studistoricianapoli.png" alt="Homepage del sito www.studistoricianapoli.it" height="150" width="150"></a>
+      </p>
+      <p class="centered"><a href="https://www.studistoricianapoli.it" target="_blank">studistoricianapoli.it</a></p>
+      <p class="centered">Sito dell'archivio storico Giovanni Anapoli di Montecchio Precalcino (VI).</p>
+      <p class="centered">wordpress</p>
+    </div>
+  </div>
+</section>
+<section id="contacts">
+  <div class="container" id="contactsSection">
+    <h2>Contatti</h2>
+    <p class="centered">Contattami pure per qualsiasi informazione, domanda, preventivo!
+      <br><a href="mailto:ncdm.developer@gmail.com">ncdm.developer@gmail.com</a>
+      <br>+39 342 101 44 56
+    </p>
+    <p class="centered"><a href="https://www.facebook.com/nicodemo.valerio" target="_blank"><img src="./img/social/facebook.png" alt="Facebook icon" height="64" width="64"></a> <a href="https://www.instagram.com/nicodemovalerio/" target="_blank"><img src="./img/social/instagram.png" alt="Instagram icon" height="64" width="64"></a> <a href="https://www.linkedin.com/in/nicodemovalerio/" target="_blank"><img src="./img/social/linkedin.png" alt="Linkedin icon" height="64" width="64"></a> <a href="https://www.youtube.com/channel/UCPxB_SiQevOZTGFGnhRDDGw" target="_blank"><img src="./img/social/youtube.png" alt="Youtube icon" height="64" width="64"></a></p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>&copy;2019 Nicodemo Valerio</p>
+  </div>
+</footer>
+</body>
 </html>

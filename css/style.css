@@ -13,20 +13,6 @@ a {color: gray;}
 a:hover {text-decoration: none;}
 a:hover img{border: 1px solid brown;}
 
-#goToTopButton {
-  display: block;
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-  z-index: 99;
-  cursor: pointer;
-  padding: 1em;
-}
-#goToTopButton:hover {
-  color: white;
-  background-color: black;
-}
-
 /* Generic classes */
 .container {
   color: #333;
@@ -34,10 +20,136 @@ a:hover img{border: 1px solid brown;}
   margin: auto;
   overflow: hidden;
   transition-delay: 0.5s;
-  transition-duration: 3s;
+  transition-duration: 2s;
 }
 .small {font-size: 0.3em;}
 .centered {text-align: center;}
+
+/* id elements */
+#goToTopButton {
+  color: black;
+  background: url('../img/icons/goToTop.png');
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 99;
+  cursor: pointer;
+  padding: 1em;
+  border: 0;
+}
+#goToTopButton:hover {
+  background-color: grey;
+  border-radius: 50%;
+}
+
+/* Header */
+header {
+  background-color: white;
+}
+#header-title {
+  position: relative;
+  animation: slide-from-bottom 3s;
+}
+#language {
+  color: white;
+  background-color: black;
+}
+#language:hover {
+  color: brown;
+  background-color: white;
+}
+
+#header-title h1 {float: left; margin-top: 0.2em;}
+
+#header-title a:hover {
+  color: black;
+  background-color: white;
+}
+header nav {
+  font-size: 0.6em;
+  float: right;
+  padding-left: 0;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  position: relative;
+  animation: slide-from-top 3s;
+}
+header li {
+    float: left;
+    text-decoration: none;
+    display: inline;
+    margin-right: 0.5em;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em;
+}
+header a:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Showcase */
+#showcase {
+  min-height: 600px;
+  min-width: 800px;
+  background-image: url('../img/showcase/keyboard.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+}
+#showcase h2, p {
+  margin: 0;
+  padding-left: 0;
+}
+#showcase h2 {margin-top: 250px;}
+
+/* Services */
+#services {padding-bottom: 1em;}
+.service, .workblock {
+  float: left;
+  width: 29%;
+  font-size: 0.6em;
+  padding: 1em;
+}
+.service h3 {text-align: center;}
+
+/* Contacts */
+#contacts {padding-bottom: 1em;}
+
+/* Footer */
+footer{
+  font-size: 0.5em;
+  background: white;
+  color: lightgray;
+  text-align: center;
+  padding: 3em 0;
+}
+/* Media */
+@media(max-width: 768px) {
+  body {font-size: 1em;}
+  h2 {padding-left: 0;}
+  #header-title h1, #language, header nav, header nav li, .container,
+  #showcase, #about, #services, .service, #work, .workblock, #contacts,
+  footer {
+    float:none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+  header nav {padding-top: 0;}
+  header li {padding: 0;}
+
+  #showcase {min-width: 200px; min-height: 200px;}
+  #showcase h2 {margin-top: 2em;}
+}
 
 /* Animations */
 img.slide-from-right, div.slide-from-right, p.slide-from-right {
@@ -84,102 +196,4 @@ img.slide-left-right, div.slide-left-right, p.slide-left-right {
   0%  {left: -50%;}
   50% {left: +50%;}
   100% {left: -0%;}
-}
-
-/* Header */
-header {
-  background-color: white;
-}
-#language {text-align: right; font-size: 0.5em; padding-top: 1em;}
-#header-title {float: left;}
-
-#header-title a:hover {
-  color: black;
-  background-color: white;
-}
-header nav {
-  float: right;
-  padding-top: 3em;
-  padding-bottom: 2em;
-  position: relative;
-  animation: slide-from-left 3s;
-}
-header li {
-    float: left;
-    text-decoration: none;
-    display: inline;
-    margin-right: 1em;
-}
-header a {
-  color: #333;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.5em;
-}
-header a:hover {
-  color: white;
-  background-color: black;
-}
-#header-title h1 {
-  color: #333;
-  font-size: 3em;
-  position: relative;
-  animation: slide-from-right 3s;
-  text-transform: lowercase;
-}
-
-/* Showcase */
-#showcase {
-  min-height: 600px;
-  min-width: 800px;
-  background-image: url('../img/showcase/keyboard.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
-  text-align: center;
-  color: white;
-}
-#showcase h2, p {
-  margin: 0;
-  padding-left: 0;
-}
-#showcase h2 {margin-top: 250px;}
-
-/* Services */
-#services {padding-bottom: 1em;}
-.service, .workblock {
-  float: left;
-  width: 29%;
-  font-size: 0.6em;
-  padding: 1em;
-}
-.service h3 {text-align: center;}
-
-/* Contacts */
-#contacts {padding-bottom: 1em;}
-
-/* Footer */
-footer{
-  font-size: 0.5em;
-  background: white;
-  color: lightgray;
-  text-align: center;
-  padding: 3em 0;
-}
-/* Media */
-@media(max-width: 400px) {
-  body {font-size: 1em;}
-  h2 {padding-left: 0;}
-  #header-title, header nav, header nav li, .container,
-  #showcase, #about, #services, .service, #work, .workblock, #contacts,
-  footer {
-    float:none;
-    text-align: center;
-    width: 100%;
-    padding: 0;
-  }
-  header nav {padding-top: 0;}
-
-  #showcase {min-width: 200px; min-height: 200px;}
-  #showcase h2 {margin-top: 2em;}
 }
