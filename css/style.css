@@ -104,6 +104,9 @@ header a:hover {
   background-attachment: fixed;
   text-align: center;
   color: white;
+  position: relative;
+  animation: slide-from-bottom 3s;
+
 }
 #showcase h2, p {
   margin: 0;
