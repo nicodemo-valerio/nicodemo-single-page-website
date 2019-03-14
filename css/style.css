@@ -1,6 +1,6 @@
 body {
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-family: "Verdana", "Trebuchet MS", "Avenir", "Arial", "Helvetica", sans-serif;
   line-height: 1.5;
   padding: 0;
   margin: 0;
@@ -40,14 +40,14 @@ a:hover img{border: 1px solid brown;}
   padding: 1em;
   border: 0;
 }
-#goToTopButton:hover {
-  background-color: grey;
-  border-radius: 50%;
-}
+#goToTopButton:hover {background-color: grey; border-radius: 50%;}
 
 /* Header */
 header {
   background-color: white;
+  display: flex;
+  flex: 0 1 50vh;
+  height: 30vh;
 }
 #header-title {
   position: relative;
@@ -63,7 +63,6 @@ header {
 }
 
 #header-title h1 {float: left; margin-top: 0.2em;}
-
 #header-title a:hover {
   color: black;
   background-color: white;
@@ -89,30 +88,23 @@ header a {
   text-transform: uppercase;
   padding: 0.5em;
 }
-header a:hover {
-  color: white;
-  background-color: black;
-}
+header a:hover {color: white; background-color: black;}
 
 /* Showcase */
 #showcase {
-  min-height: 600px;
-  min-width: 800px;
+  height: 70vh;
   background-image: url('../img/showcase/keyboard.jpg');
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
   text-align: center;
   color: white;
   position: relative;
   animation: slide-from-bottom 3s;
-
+  display: flex;
+  flex: 0 1 50vh;
 }
-#showcase h2, p {
-  margin: 0;
-  padding-left: 0;
-}
-#showcase h2 {margin-top: 250px;}
 
 /* Services */
 #services {padding-bottom: 1em;}
@@ -121,6 +113,7 @@ header a:hover {
   width: 29%;
   font-size: 0.6em;
   padding: 1em;
+  display: inline-block;
 }
 .service h3 {text-align: center;}
 
@@ -196,7 +189,7 @@ img.slide-left-right, div.slide-left-right, p.slide-left-right {
   animation: slide-left-right 3s;
 }
 @keyframes slide-left-right {
-  0%  {left: -50%;}
-  50% {left: +50%;}
+  0%  {left: -100%;}
+  50% {left: +100%;}
   100% {left: -0%;}
 }

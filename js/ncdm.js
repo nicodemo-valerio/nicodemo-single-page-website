@@ -2,50 +2,11 @@
  File: ncdm.js
  Author: Nicodemo valerio
 */
-window.onscroll = function() {scrollToTop()};
-document.body.onload = hideSections(true);
 
-function hideSections(isOnLoad) {
-  var menuLinks = document.getElementById("menu").childNodes[1].children;
-  var i = 0;
-  var l = menuLinks.length;
-  var sectionName = "";
-  var link;
-  for(; i < l; i++) {
-    link = menuLinks[i].children[0];
-    if(isOnLoad) {
-      link.onclick = displaySection;
-      document.getElementById(getName(link) + "Section").onmouseover = displaySection;
-      document.getElementById(getName(link) + "Section").ontouchstart = displaySection;
-      document.getElementById(getName(link) + "Section").onmouseleave = hideSection;
-    }
-    hideSection(getName(link));
-  }
-}
+// Scroll to top button
+window.onscroll = function() {scroll()};
 
-function getName(link) {
-  var sectionName = link.attributes.href.value;
-  return sectionName.substr(1, sectionName.length);
-}
-
-function hideSection(link) {
-  if(this.attributes != null && this.attributes.class.value == "container"){
-    document.getElementById(this.attributes.id.value).style.opacity = 0.1;
-  } else if(link != undefined){
-    document.getElementById(link + "Section").style.opacity = 0.1;
-  }
-}
-
-function displaySection() {
-  //hideSections(false);
-  if(this.attributes.class.value == "container"){
-    document.getElementById(this.attributes.id.value).style.opacity = 1;
-  }
-    //var sectionName = getName(this);
-    //document.getElementById(sectionName + "Section").style.opacity = 1;
-}
-
-function scrollToTop() {
+function scroll() {
   if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     document.getElementById("goToTopButton").style.display = "block";
   } else {
@@ -56,4 +17,37 @@ function scrollToTop() {
 function goToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+// Set opacity on page load
+document.body.onload = setSections(true);
+
+function setSections(isFirstTime) {
+  var menuLinks = document.getElementById("menu").childNodes[1].children;
+  var i = 0;
+  var l = menuLinks.length-1; //last link language not considered
+  var link = ""; var sectionName = "";
+  for(; i < l; i++) {
+    link = menuLinks[i].children[0];
+    sectionName = getSectionName(link);
+    if(isFirstTime) {
+      link.onclick = onLinkClick;
+      document.getElementById(sectionName + "Section").onmouseover = removeOpacity;
+      document.getElementById(sectionName + "Section").ontouchstart = removeOpacity;
+    }
+    document.getElementById(sectionName + "Section").style.opacity = 0.1;
+  }
+}
+
+function onLinkClick() {
+  document.getElementById(getSectionName(this) + "Section").style.opacity = 1;
+}
+
+function getSectionName(link) {
+  var sectionName = link.attributes.href.value; // href="#about"
+  return sectionName.substr(1, sectionName.length); // remove #
+}
+
+function removeOpacity() {
+    document.getElementById(this.attributes.id.value).style.opacity = 1;
 }
