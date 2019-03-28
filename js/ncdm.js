@@ -4,13 +4,13 @@
 */
 
 // Scroll to top button
-window.onscroll = function() {scroll()};
+window.onscroll = function () { scroll() };
 
 function scroll() {
-  if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    document.getElementById("goToTopButton").style.display = "block";
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.querySelector(`#goToTopButton`).style.display = 'block';
   } else {
-    document.getElementById("goToTopButton").style.display = "none";
+    document.querySelector(`#goToTopButton`).style.display = 'none';
   }
 }
 
@@ -23,24 +23,26 @@ function goToTop() {
 document.body.onload = setSections(true);
 
 function setSections(isFirstTime) {
-  var menuLinks = document.getElementById("menu").childNodes[1].children;
+  //var menuLinks = document.getElementById("menu").childNodes[1].children;
+  var menuLinks = document.querySelector(`#menu`).children[0].children;
   var i = 0;
-  var l = menuLinks.length-1; //last link language not considered
+  var l = menuLinks.length - 1; //last link language not considered
   var link = ""; var sectionName = "";
-  for(; i < l; i++) {
+  for (; i < l; i++) {
     link = menuLinks[i].children[0];
     sectionName = getSectionName(link);
-    if(isFirstTime) {
+    if (isFirstTime) {
       link.onclick = onLinkClick;
-      document.getElementById(sectionName + "Section").onmouseover = removeOpacity;
-      document.getElementById(sectionName + "Section").ontouchstart = removeOpacity;
+      console.log(`${sectionName}Section`);
+      document.querySelector(`#${sectionName}Section`).onmouseover = removeOpacity;
+      document.querySelector(`#${sectionName}Section`).ontouchstart = removeOpacity;
     }
-    document.getElementById(sectionName + "Section").style.opacity = 0.1;
+    document.querySelector(`#${sectionName}Section`).style.opacity = 0.1;
   }
 }
 
 function onLinkClick() {
-  document.getElementById(getSectionName(this) + "Section").style.opacity = 1;
+  document.querySelector(`#${getSectionName(this)}Section`).style.opacity = 1;
 }
 
 function getSectionName(link) {
@@ -49,5 +51,5 @@ function getSectionName(link) {
 }
 
 function removeOpacity() {
-    document.getElementById(this.attributes.id.value).style.opacity = 1;
+  document.querySelector(`#${this.attributes.id.value}`).style.opacity = 1;
 }
